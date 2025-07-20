@@ -33,17 +33,6 @@ def test(model, figure_data, target):
             return False
 
 def conv_2d_single_kernel(input_data, kernel, stride):
-    """单个卷积核进行卷积，得到单个输出。
-    由于是学习卷积实现原理这里简单处理，padding 是自动补全，
-    相当于tf 里面的 "SAME"。
-    Args:
-        input_data: 卷积层输入，是一个 shape 为 [h, w] 
-            的 np.array。
-        kernel: 卷积核大小，形式如 [k_h, k_w]
-        stride: stride， list [s_h, s_w]。
-    Return:
-        out: 卷积结果
-    """
     h, w = input_data.shape
     kernel_h, kernel_w = kernel.shape
 
